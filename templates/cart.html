@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Cart{% endblock %}
+{% block content %}
+<div class="justify-content-center text-center fredericka-the-great-regular">
+    <img class="mb-4" src="../static/icons/mk-quality-logo-pink.svg" alt="mk quality logo" width="225">
+    <h1 class="h3 mb-5 fw-normal">Cart</h1>
+</div>
+
+
+<table class="table mb-3">
+    <thead>
+    <tr>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in cart_items %}
+    <tr>
+        <td><img src="{{item.image}}" width="20"> |  {{item.title}}</td>
+        <td>{{item.price}} €</td>
+        <td><a href="{{ url_for('remove_from_cart', product_id=item.id) }}"><img src="../static/icons/remove_icon.svg" width="20px"></a></td>
+    </tr>
+    {% endfor %}
+    <tr style="font-weight: bold; border: 5px solid #C68FE6">
+        <td>Total:</td>
+        <td>{{total_sum}} €</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+
+<form action="{{ url_for('create_checkout_session') }}" method="POST">
+    <button type="submit" class="btn btn-primary">
+        Proceed to Payment
+    </button>
+</form>
+{% endblock %}

@@ -1,0 +1,102 @@
+header {
+    background-color: #C68FE6;
+}
+
+#footer {
+    margin-top: 70px;
+    background-color: #C68FE6;
+}
+
+body {
+    margin: auto;
+    background-color: #FFF7F7;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.content-block {
+    margin-bottom: 50px;
+    margin-top: 0;
+
+
+}
+.border-top {
+    padding-top: 10px;
+}
+
+.flash {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fredericka-the-great-regular {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btn-primary {
+    background-color: #1230AE;
+    color: #FFF7F7
+}
+
+.btn-outline-primary {
+    color: #FFF7F7
+}
+
+.category-products {
+    background: #FFF7F7;
+}
+
+.carousel-wrapper {
+    min-width: 40%;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-decoration: underline;
+    color: #6C48C5;
+}
+
+.h3 {
+    color: #6C48C5;
+}
+
+.price {
+    font-size: xx-large;
+    color: black;
+    padding-right: 15px;
+}
+
+.album-single-product {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Hoia elemendid laiali */
+    align-items: center;
+    padding-left: 15px;
+}
+
+.form-signin {
+    max-width: 400px; /* Muuda siin laiust vastavalt vajadusele */
+    margin: auto; /* Keskendamiseks */
+}
+
+.subscribe {
+    margin-left: auto;   /* See nihutab elemendi paremale */
+    margin-right: 0;
+}
+
+.table {
+    border: 5px solid #C68FE6
+}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "bootstrap5/form.html" import render_form %}
+{% block title %}MK Quality - Register{% endblock %}
+{% block content %}
+<div class="form-signin w-100 m-auto fredericka-the-great-regular">
+    <div class="text-center mt-1">
+        <img class="mb-4" src="../static/icons/mk-quality-logo-pink.svg" alt="mk quality logo" width="225">
+        <h1 class="h3 mb-5 fw-normal">Register</h1>
+        {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+    </div>
+</div>
+{% endblock %}

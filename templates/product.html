@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ item.title }}{% endblock %}
+{% block content %}
+<div class="col">
+    <div class="card shadow-sm" style="height: 1000px">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="600" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"
+             style="background-image: url('{{ item.image }}'); background-size: contain; background-position: center;
+                  background-repeat: no-repeat; margin-top: 15px">
+        </svg>
+        <small class="price text-lg-end mb-4" style="color: #1230AE;">{{ "%.2f" | format(item.price) }} €</small>
+        <div style="border-bottom: 3px solid  #C68FE6"></div>
+
+        <div class="card-body">
+            <p class="card-text"><h3 style="text-align: center">{{ item.title }}</h3></p>
+            <br>
+            {% for feature in item.description.split(";") %}
+            <p class="card-text">
+            <h6>  {{ feature }}</h6>
+            </p>
+            {% endfor %}
+
+            <div class="d-flex justify-content-center mt-5">
+                <a href="{{ url_for('add_to_basket', product_id=item.id) }}">
+                    <button type="button" class="btn btn-primary btn-lg">Add to Basket</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

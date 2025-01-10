@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}MK Quality{% endblock %}
+{% block content %}
+<div class="main-logo">
+    <img class="d-block mx-auto" src="../static/icons/mk-quality-logo-pink.svg" alt="facebook" height="150">
+</div>
+<div>
+    <h1 class="fredericka-the-great-regular container pt-4 pb-4">Our Top-Rated Products</h1>
+</div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        {% for i in range(carousel_items | length) %}
+        <div class="carousel-item {% if i == 1 %}active{% endif %}">
+            <img src="{{ carousel_items[i] }}" class="d-block w-100" alt="item" style="height: 600px; object-fit: contain;">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
